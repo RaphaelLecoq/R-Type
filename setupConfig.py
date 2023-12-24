@@ -89,6 +89,28 @@ def add_entity_dialog():
     save_button = tk.Button(entity_window, text="Save Entity", command=save_entity)
     save_button.pack()
 
+def update_entities():
+    for entity in config_data["scenes"][0]["Game"]["entities"]:
+        # Skip entities that are not set to renderable
+        if entity.get("Renderable", 0) != 1:
+            continue
+
+        control = entity.get("Control", {})
+        transform = entity.get("Transform", {})
+        speed = 5  # You can adjust the speed as needed
+
+        if control.get("straight", False):
+            # Move straight in the positive y-direction
+            transform["position"]["y"] += speed
+        elif control.get("random", False):
+            # Move randomly in both x and y directions
+            import random
+            transform["position"]["x"] += random.uniform(-speed, speed)
+            transform["position"]["y"] += random.uniform(-speed, speed)
+
+    # Call the function again after a certain time (in milliseconds)
+    app.after(100, update_entities)
+
 # Save the config file
 def save_config():
     with open('config.cfg', 'w') as file:
@@ -110,5 +132,7 @@ add_entity_button.pack()
 
 save_button = tk.Button(app, text="Save Config", command=save_config)
 save_button.pack()
+
+update_entities()
 
 app.mainloop()

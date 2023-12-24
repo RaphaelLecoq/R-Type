@@ -1,0 +1,31 @@
+{
+    "layers": [
+        {
+            "deph": 1,
+            "name": "input",
+            "assets": [
+                {
+                    "name": "assets/1.jpg",
+                    "position": [0, 0]
+                },
+                {
+                    "name": "assets/2.jpg",
+                    "position": [0, 0],
+                    "scale": 0.5
+                }
+            ],
+            "texts": [
+                {
+                    "name": "text1",
+                    "position": [0, 0],
+                    "font": "OpenSans-Bold"
+                },
+                {
+                    "name": "text2",
+                    "position": [0, 0],
+                    "font": "OpenSans-Bold"
+                }
+            ]
+        }
+    ]
+}
