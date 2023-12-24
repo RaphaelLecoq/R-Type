@@ -24,10 +24,7 @@ To play the game or contribute to its development, please visit our [Home Page](
 ### :wrench: **DOCUMENTATION**
 
 Wiki:
-- [**Technical Documentation & Wiki**](https://github.com/EpitechPromo2026/B-CPP-500-REN-5-2-rtype-mathys.thevenot/wiki)
-
-For detailed documentation on the Flakkari protocol, see:
-- [**Flakkari Protocol Documentation**](https://github.com/MasterLaplace/Flakkari/wiki/Flakkari-protocol)
+- [**Technical Documentation & Wiki**](https://github.com/RaphaelLecoq/R-Type/wiki)
 
 <div id='license'/>
 
