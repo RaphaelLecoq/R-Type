@@ -17,7 +17,7 @@ We have combined our skills in C++ and game development to create an engaging an
 
 ## Getting Started
 
-To play the game or contribute to its development, please visit our [Home Page]([link-to-your-wiki](https://github.com/EpitechPromo2026/B-CPP-500-REN-5-2-rtype-mathys.thevenot)).
+To play the game or contribute to its development, please visit our [Home Page](https://github.com/EpitechPromo2026/B-CPP-500-REN-5-2-rtype-mathys.thevenot).
 
 <div id='documentation'/>
 
