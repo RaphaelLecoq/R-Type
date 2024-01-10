@@ -10,7 +10,8 @@ config_data = {
             "fonts": [],
             "sounds": [],
             "music": [],
-            "entities": []
+            "entities": [],
+            "templates": []
         }}
     ]
 }
@@ -44,7 +45,7 @@ def add_entity_dialog():
                 }
             }
         }
-        config_data["scenes"][0]["Game"]["entities"].append(entity)
+        config_data["scenes"][0]["Game"]["templates"].append(entity)
         entity_window.destroy()
 
     entity_window = tk.Toplevel(app)
@@ -90,7 +91,7 @@ def add_entity_dialog():
     save_button.pack()
 
 def update_entities():
-    for entity in config_data["scenes"][0]["Game"]["entities"]:
+    for entity in config_data["scenes"][0]["Game"]["templates"]:
         # Skip entities that are not set to renderable
         if entity.get("Renderable", 0) != 1:
             continue
