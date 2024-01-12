@@ -9,6 +9,7 @@ end
 function movementManager(entity)
     local transformComponent = getComponentTransform(entity)
     local movableComponent = getComponentMovable(entity)
+    local fireRate = getFireRate(entity)
     local controlComponent = getComponentControl(entity)
     local clock = getElapsedTime(entity)
 
@@ -39,7 +40,7 @@ function movementManager(entity)
         end
 
         if getInput(entity, 57) then
-            if clock > 0.2 then
+            if clock > fireRate then
                 restartClock(entity)
                 createBullet(entity, transformComponent)
             end
