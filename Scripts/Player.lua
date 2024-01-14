@@ -3,6 +3,16 @@ function scriptLua(entity)
 
     --print("scriptLua called")
     movementManager(entity)
+    boss(entity)
+end
+
+
+function boss(entity)
+    local clock2 = getElapsedTime2(entity)
+
+    if clock2 > 15 then
+        bossSpawn(entity)
+    end
 end
 
 
