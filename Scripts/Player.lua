@@ -13,6 +13,10 @@ function movementManager(entity)
     local controlComponent = getComponentControl(entity)
     local clock = getElapsedTime(entity)
 
+    local SHOOT = 14
+    local PRESSED = 1
+    local RELEASED = 2
+
     if getInput(entity, 0) then
         movableComponent.velocity.x = 1.0
     end
@@ -43,10 +47,14 @@ function movementManager(entity)
             if clock > fireRate then
                 restartClock(entity)
                 createBullet(entity, transformComponent)
+                addEvent(SHOOT, PRESSED);
             end
         else
-            spaceKeyPressed = false
+            if getEventState(SHOOT, PRESSED) then
+                addEvent(SHOOT, RELEASED);
+            else
+                addEvent(SHOOT, NONE);
+            end
         end
     end
 end
-
