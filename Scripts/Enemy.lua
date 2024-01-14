@@ -11,7 +11,7 @@ function createEnemyBullet(entity)
     local colliderComponent = getComponentCollider(entity)
     local clock = getElapsedTime(entity)
 
-    if clock > 1 then
+    if clock > 2 then
         restartClock(entity)
         createMobsBullet(entity, transformComponent, colliderComponent)
     end
